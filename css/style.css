@@ -1,0 +1,558 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1A1B1F;
+  font-family: "Poppins", sans-serif;
+  margin: 0 15px;
+}
+
+h1 {
+  font-size: 28px;
+  color: #F3F4F7;
+}
+
+h2 {
+  font-size: 16px;
+  color: #c6c6ca;
+}
+
+h3 {
+  font-size: 13px;
+  color: #A7A8AD;
+  margin: 0;
+}
+
+h4 {
+  font-size: 13px;
+  color: #A7A8AD;
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10 px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(52, 58, 60, 0.549);
+  border-radius: 50px;
+}
+
+.tarjeta_base, .chat, .productos .libreria, .productos .accesorio, .bienvenida {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(126, 126, 126, 0.1568627451);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.separador {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  font-size: 20px;
+  padding: 0 10px;
+}
+.menu-nav__logo {
+  color: #F3F4F7;
+}
+.menu-nav__list {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 20px;
+}
+.menu-nav__list__item__link {
+  color: #c6c6ca;
+  transition: color 0.3s ease;
+}
+.menu-nav__list__item__link:hover {
+  color: #0A82EE;
+}
+.menu-nav__list .activo {
+  background-color: #0A82EE;
+  padding: 0 8px;
+  border-radius: 10px;
+  color: #F3F4F7;
+}
+
+.bienvenida {
+  background: linear-gradient(to bottom, #252731, #0d0e14);
+  margin-top: 10px;
+  gap: 20px;
+}
+.bienvenida__left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.bienvenida__left__nuevo {
+  padding: 2px 8px;
+  background-color: #F55157;
+  border-radius: 5px;
+  color: #f1f1f1;
+  font-weight: bold;
+  font-size: 12px;
+  width: 45px;
+}
+.bienvenida__left__titulo {
+  color: #F3F4F7;
+}
+.bienvenida__left__comprar {
+  padding: 8px 5px 8px 20px;
+  background-color: #2C2E3B;
+  border-radius: 29px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 12px;
+}
+.bienvenida__left__comprar__precio {
+  color: #c9c9c9;
+}
+.bienvenida__left__comprar__boton {
+  border-radius: 22px;
+  padding: 8px 20px;
+  text-decoration: none;
+  font-size: 12px;
+}
+.bienvenida__left__comprar__boton--blue {
+  background-color: #0A82EE;
+  color: #F3F4F7;
+}
+.bienvenida__right__img {
+  max-width: 100%;
+}
+
+.galeria {
+  margin-top: 20px;
+}
+.galeria__titulo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.galeria__flex {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.galeria__flex .tarjeta {
+  display: flex;
+  flex-direction: column;
+}
+.galeria__flex .tarjeta__img {
+  max-width: 100%;
+  border-radius: 20px;
+}
+.galeria__flex .tarjeta__titulo {
+  color: #c6c6ca;
+  margin-top: 10px;
+}
+.galeria__flex .tarjeta__horas {
+  color: #A7A8AD;
+  font-size: 12px;
+}
+
+.productos {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
+}
+.productos .accesorio {
+  background: #20232A;
+}
+.productos .accesorio__imagen {
+  max-width: 100%;
+}
+.productos .libreria {
+  margin-top: 10px;
+  background-color: #20232A;
+}
+.productos .libreria__titulo {
+  margin-bottom: 15px;
+}
+.productos .libreria__lista {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+}
+.productos .libreria .juego {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.productos .libreria .juego__img {
+  width: 100%;
+  max-width: 100%;
+  height: 180px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+.productos .libreria .juego__contenido {
+  width: 40%;
+}
+.productos .libreria .juego__contenido__titulo {
+  color: #c6c6ca;
+  display: block;
+}
+.productos .libreria .juego__contenido__consola {
+  color: #A7A8AD;
+  font-size: 12px;
+}
+.productos .libreria .juego__fecha {
+  width: 30%;
+}
+.productos .libreria .juego__fecha__dia {
+  color: #A7A8AD;
+  display: block;
+}
+.productos .libreria .juego__fecha__ano {
+  color: #A7A8AD;
+  font-size: 12px;
+}
+.productos .libreria .juego__boton {
+  width: 17%;
+  border-radius: 5px;
+  padding: 5px 3px;
+  text-decoration: none;
+  align-self: center;
+  text-align: center;
+  font-size: 18px;
+}
+.productos .libreria .juego__boton--azul {
+  color: #F3F4F7;
+  background-color: #2A66A8;
+}
+
+.chat {
+  background: linear-gradient(to bottom, #252731, #0d0e14);
+  margin-top: 20px;
+}
+.chat__titulo {
+  margin-bottom: 18px;
+}
+.chat .juego-reciente {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(to bottom, #3f4250, #292b31);
+  border-radius: 20px;
+}
+.chat .juego-reciente__info__nombre {
+  color: #c6c6ca;
+  display: block;
+  font-size: 14px;
+}
+.chat .juego-reciente__info__tiempo {
+  color: #A7A8AD;
+  font-size: 11px;
+}
+.chat .juego-reciente__info__icono {
+  color: #c6c6ca;
+  font-size: 35px;
+  transition: color ease 0.5s;
+}
+.chat .juego-reciente__info__icono:hover {
+  color: rgba(54, 204, 0, 0.7882352941);
+}
+.chat .chat__online {
+  margin-top: 18px;
+  margin-bottom: 10px;
+}
+.chat .chat__lista {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.chat .chat__lista__contacto {
+  display: flex;
+  column-gap: 10px;
+}
+.chat .chat__lista__contacto__img {
+  width: 45px;
+  height: 48px;
+  border-radius: 10px;
+  border: 2px solid rgba(4, 150, 128, 0.4666666667);
+}
+.chat .chat__lista__contacto__info__nombre {
+  display: block;
+  font-size: 14px;
+  color: #c6c6ca;
+}
+.chat .chat__lista__contacto__info__estado {
+  font-size: 11px;
+  color: #A7A8AD;
+}
+.chat .chat__grupos {
+  margin-top: 18px;
+  margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 480px) {
+  .bienvenida__left__comprar {
+    width: 280px;
+  }
+  .chat .chat__lista {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .chat .chat__lista__contacto {
+    flex-basis: 50%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .principal {
+    margin-top: 30px;
+  }
+  .bienvenida {
+    flex-direction: row;
+    align-items: center;
+    height: 300px;
+  }
+  .bienvenida__left__comprar {
+    margin: 0;
+    font-size: 14px;
+    width: 183px;
+  }
+  .bienvenida__right {
+    width: 600px;
+    height: 300px;
+    position: relative;
+  }
+  .bienvenida__right__img {
+    position: absolute;
+    top: -20px;
+  }
+  .galeria__flex {
+    flex-direction: row;
+  }
+  .galeria__flex .tarjeta {
+    flex-basis: 33.33%;
+  }
+  .productos {
+    flex-direction: row;
+  }
+  .productos .accesorio {
+    width: 40%;
+  }
+  .productos .accesorio__imagen {
+    width: 210px;
+    height: 210px;
+    align-self: center;
+  }
+  .productos .libreria {
+    width: 60%;
+    margin-top: 0;
+  }
+  .productos .libreria__titulo {
+    margin-bottom: 15px;
+  }
+  .productos .libreria__lista {
+    row-gap: 25px;
+  }
+  .productos .libreria .juego {
+    flex-wrap: nowrap;
+  }
+  .productos .libreria .juego__img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+  }
+  .productos .libreria .juego__contenido {
+    width: 40%;
+  }
+  .productos .libreria .juego__contenido__titulo {
+    color: #c6c6ca;
+    display: block;
+  }
+  .productos .libreria .juego__contenido__consola {
+    color: #A7A8AD;
+    font-size: 12px;
+  }
+  .productos .libreria .juego__fecha {
+    width: 25%;
+  }
+  .productos .libreria .juego__fecha__dia {
+    color: #A7A8AD;
+    display: block;
+  }
+  .productos .libreria .juego__fecha__ano {
+    color: #A7A8AD;
+    font-size: 12px;
+  }
+  .productos .libreria .juego__boton {
+    width: 17%;
+    border-radius: 5px;
+    padding: 5px 3px;
+    text-decoration: none;
+    align-self: center;
+    text-align: center;
+    font-size: 18px;
+  }
+  .productos .libreria .juego__boton--azul {
+    color: #F3F4F7;
+    background-color: #2A66A8;
+  }
+  .chat .chat__lista {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .chat .chat__lista__contacto {
+    flex-basis: 25%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  body {
+    margin: 0;
+  }
+  .separador {
+    flex-direction: row;
+  }
+  .menu-nav {
+    width: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 150px;
+    border-right: 1.5px solid rgba(126, 126, 126, 0.1568627451);
+    margin: 0;
+    padding-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+  .menu-nav__logo {
+    font-size: 30px;
+    color: #F3F4F7;
+  }
+  .menu-nav__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    font-size: 20px;
+  }
+  .principal {
+    width: 60%;
+    margin: 20px 50px 20px 100px;
+    margin-left: 100px;
+  }
+  .bienvenida {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 300px;
+  }
+  .bienvenida__left {
+    padding-left: 30px;
+  }
+  .bienvenida__right {
+    position: relative;
+  }
+  .bienvenida__right__img {
+    height: 300px;
+    position: absolute;
+    top: -20px;
+  }
+  .galeria__titulo {
+    text-align: left;
+    margin-left: 10px;
+  }
+  .chat {
+    width: 35%;
+    margin-right: 25px;
+    margin-top: 30px;
+    height: 700px;
+    position: sticky;
+    top: 3%;
+  }
+  .chat .chat__lista {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .chat .chat__lista__contacto {
+    flex-basis: 100%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .principal {
+    width: 65%;
+  }
+  .chat {
+    width: 30%;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .principal {
+    width: 70%;
+  }
+  .bienvenida__left__titulo {
+    font-size: 33px;
+  }
+  .bienvenida__left__comprar {
+    width: 230px;
+  }
+  .bienvenida__left__comprar__boton {
+    font-size: 14px;
+  }
+  .chat {
+    width: 25%;
+  }
+}
+.input-container {
+  position: relative;
+}
+
+input[type=text] {
+  padding-left: 30px; /* para que el texto no se solape con el icono */
+  padding: 10px 0px 10px 30px;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  background-color: rgba(42, 44, 49, 0.855);
+  color: rgba(255, 255, 255, 0.629);
+}
+
+.icon {
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/icons/lupa.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/*# sourceMappingURL=style.css.map */

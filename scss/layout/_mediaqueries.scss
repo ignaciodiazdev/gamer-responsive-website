@@ -1,0 +1,243 @@
+@media only screen and (min-width: 480px){
+    .bienvenida{
+        &__left{
+            &__comprar{
+                width: 280px;
+            }
+        }   
+    }
+    .chat{
+        .chat__lista{
+            flex-direction: row;
+            flex-wrap: wrap;
+            &__contacto{
+                flex-basis: 50%;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    .principal{
+        margin-top: 30px;
+    }
+    .bienvenida{
+        flex-direction: row;
+        align-items: center; 
+        height: 300px;
+        &__left{
+            &__comprar{
+                margin: 0;
+                font-size: 14px;
+                width: 183px;
+            }
+        }   
+        &__right{
+            width: 600px;
+            height: 300px;
+            position: relative;
+            &__img{
+                position: absolute;
+                top: -20px;
+            }
+        }
+    }
+
+    .galeria{
+        &__flex{
+            flex-direction: row;
+            .tarjeta{
+                flex-basis: 33.33%;
+            }
+        }
+    }
+    .productos{
+        flex-direction: row;
+        .accesorio{ 
+            width: 40%;
+            &__imagen{
+                width: 210px;
+                height: 210px;
+                align-self: center;
+            }
+        }
+        .libreria{
+            width: 60%;
+            margin-top: 0;
+            &__titulo{
+                margin-bottom: 15px;
+            }
+            &__lista{
+                row-gap: 25px;
+            }
+            .juego{
+                flex-wrap: nowrap; //no-wrap para pantalla grande
+                &__img{
+                    width: 50px; //20% para pantalla grande
+                    height: 50px;
+                    border-radius: 5px;
+                }
+                &__contenido{
+                    width: 40%; //40% para pantalla grande
+                    &__titulo{
+                        color: $blanco-secondary;
+                        display: block;
+                    }
+                    &__consola{
+                        color: $blanco-third;
+                        font-size: 12px;
+                    }
+    
+                }
+                &__fecha{
+                    width: 25%; //25% para pantalla grande
+                    &__dia{
+                        color: $blanco-third;
+                        display: block;
+                    }
+                    &__ano{
+                        color: $blanco-third;
+                        font-size: 12px;
+                    }
+                }
+                &__boton{
+                    width: 17%; //15% para pantalla grande
+                    border-radius: 5px;
+                    padding: 5px 3px;
+                    text-decoration: none;
+                    align-self: center;
+                    text-align: center;
+                    font-size: 18px;
+                    &--azul{
+                        color: $blanco-primary;
+                        background-color: $azul-secondary;
+                    }
+                }
+    
+            }
+        }
+    }
+    .chat{
+        .chat__lista{
+            flex-direction: row;
+            flex-wrap: wrap;
+            &__contacto{
+                flex-basis: 25%;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    body{
+        margin: 0;
+    }
+    .separador{
+        flex-direction: row;
+    }
+    .menu-nav{
+        width: 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 150px;
+        border-right: 1.5px solid $borde-tarjeta;
+        margin: 0;
+        padding-top: 20px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        
+        &__logo{
+            font-size: 30px;
+            color: $blanco-primary;
+        }
+        &__list{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            font-size: 20px;
+        }
+    }
+
+    .principal{
+        width: 60%;
+        margin: 20px 50px 20px 100px;
+        margin-left: 100px;
+    }
+    .bienvenida{ 
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center; 
+        height: 300px;
+        &__left{
+            padding-left: 30px;
+        }
+        &__right{
+            position: relative;
+            &__img{
+                height: 300px;
+                position: absolute;
+                top: -20px;
+            }
+        }
+    }
+    .galeria{
+        &__titulo{
+            text-align: left;
+            margin-left: 10px;
+        }
+    }
+    .chat{
+        width: 35%;
+        margin-right: 25px;
+        margin-top: 30px;
+        height: 700px;
+        position: sticky;
+        top: 3%;
+        .chat__lista{
+            flex-direction: column;
+            flex-wrap: nowrap;
+            &__contacto{
+                flex-basis: 100%;
+            }
+        }
+    }
+
+}
+
+
+@media only screen and (min-width: 1200px) {
+    .principal{
+        width: 65%;
+    }
+    .chat{
+        width: 30%;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .principal{
+        width: 70%;
+    }
+    .bienvenida{
+        &__left{
+            &__titulo{
+                font-size: 33px;
+            }
+            &__comprar{
+                width: 230px;
+                &__boton{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .chat{
+        width: 25%;
+    }
+}

@@ -1,0 +1,279 @@
+// Bienvenida
+.separador{
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-nav{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 20px;
+    padding: 0 10px;
+    &__logo{
+        color: $blanco-primary;
+    }
+    &__list{
+        display: flex;
+        justify-content: space-between;
+        column-gap: 20px;
+        &__item{
+
+            &__link{
+                color: $blanco-secondary;
+                transition: color 0.3s ease;
+                &:hover{
+                    color: $azul-primary;
+                }
+            }
+        }
+        .activo{
+            background-color: $azul-primary;
+            padding: 0 8px;
+            border-radius: 10px;
+            color: $blanco-primary;
+        }
+    }
+}
+
+
+.bienvenida{
+
+    @extend .tarjeta_base;
+    background: $bg_tarjeta_deg;
+    margin-top: 10px;
+    gap: 20px;
+
+    &__left{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        &__nuevo{
+            padding: 2px 8px;
+            background-color: $bg-new;
+            border-radius: 5px;
+            color: $color-new;
+            font-weight: bold;
+            font-size: 12px;
+            width: 45px;
+        }
+        &__titulo{
+            color: $blanco-primary;
+        }
+        &__comprar{
+            padding: 8px 5px 8px 20px;
+            background-color: $bg-comprar;
+            border-radius: 29px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin: 0 auto;
+            margin-top: 12px;
+            &__precio{
+                color: $precio;
+            }
+            &__boton{
+                border-radius: 22px;
+                padding: 8px 20px;
+                text-decoration: none;
+                font-size: 12px;
+                &--blue{
+                    background-color: $azul-primary;
+                    color: $blanco-primary;
+                }
+            }
+        }
+    }
+    &__right{
+        &__img{
+            max-width: 100%;
+        }
+    }
+}
+
+.galeria{
+    margin-top: 20px;
+    &__titulo{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    &__flex{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .tarjeta{
+            display: flex;
+            flex-direction: column;
+            &__img{
+                max-width: 100%;
+                border-radius: 20px;    
+            }
+            &__titulo{
+                color: $blanco-secondary;
+                margin-top: 10px;
+            }
+            &__horas{
+                color: $blanco-third;
+                font-size: 12px;
+            }
+        }
+    }
+}
+.productos{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+
+    .accesorio{
+
+        @extend .tarjeta_base;
+        background: $bg-tarjeta;
+
+        &__imagen{
+            max-width: 100%;
+        }
+    }
+    .libreria{
+
+        @extend .tarjeta_base;
+        
+        margin-top: 10px;
+        background-color: $bg-tarjeta;
+        &__titulo{
+            margin-bottom: 15px;
+        }
+        &__lista{
+            display: flex;
+            flex-direction: column;
+            row-gap: 25px;
+        }
+        .juego{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap; //no-wrap para pantalla grande
+            &__img{
+                width: 100%; //20% para pantalla grande
+                max-width: 100%;
+                height: 180px;
+                border-radius: 15px;
+                object-fit: cover;
+            }
+            &__contenido{
+                width: 40%; //40% para pantalla grande
+                &__titulo{
+                    color: $blanco-secondary;
+                    display: block;
+                }
+                &__consola{
+                    color: $blanco-third;
+                    font-size: 12px;
+                }
+
+            }
+            &__fecha{
+                width: 30%; //25% para pantalla grande
+                &__dia{
+                    color: $blanco-third;
+                    display: block;
+                }
+                &__ano{
+                    color: $blanco-third;
+                    font-size: 12px;
+                }
+            }
+            &__boton{
+                width: 17%; //15% para pantalla grande
+                border-radius: 5px;
+                padding: 5px 3px;
+                text-decoration: none;
+                align-self: center;
+                text-align: center;
+                font-size: 18px;
+                &--azul{
+                    color: $blanco-primary;
+                    background-color: $azul-secondary;
+                }
+            }
+
+        }
+    }
+}
+
+.chat{
+    @extend .tarjeta_base;
+    background: $bg_tarjeta_deg;
+    margin-top: 20px;
+    &__titulo{
+        margin-bottom: 18px;
+    }
+    .juego-reciente{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background: $bg_tarjeta_lastgame;
+        border-radius: 20px;
+        &__info{
+            &__nombre{
+                color: $blanco-secondary;
+                display: block;
+                font-size: 14px;
+            }
+            &__tiempo{
+                color: $blanco-third;
+                font-size: 11px;
+            }
+            &__icono{
+                color: $blanco-secondary;
+                font-size: 35px;
+                transition: color ease 0.5s;
+                &:hover{
+                    color: #36cc00c9;
+                }
+            }
+        }
+    }
+    .chat__online{
+        margin-top: 18px;
+        margin-bottom: 10px;
+    }
+    .chat__lista{
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        &__contacto{
+            display: flex;
+            column-gap: 10px;
+            &__img{
+                width: 45px;
+                height: 48px;
+                border-radius: 10px;
+                border: 2px solid #04968077;
+            }
+            &__info{
+                &__nombre{
+                    
+                    display: block;
+                    font-size: 14px;
+                    color: $blanco-secondary;
+                }
+                &__estado{
+                    font-size: 11px;
+                    color: $blanco-third;
+                }
+            }
+        }
+    }
+    .chat__grupos{
+        margin-top: 18px;
+        margin-bottom: 10px;
+    }           
+
+}

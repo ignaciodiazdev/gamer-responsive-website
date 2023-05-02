@@ -1,0 +1,7 @@
+.tarjeta_base{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $borde-tarjeta;
+    border-radius: 20px;
+    padding: 20px;
+}
