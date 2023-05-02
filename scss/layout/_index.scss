@@ -157,16 +157,16 @@
             justify-content: space-between;
             align-items: center;
             gap: 12px;
-            flex-wrap: wrap; //no-wrap para pantalla grande
+            flex-wrap: wrap;
             &__img{
-                width: 100%; //20% para pantalla grande
+                width: 100%;
                 max-width: 100%;
                 height: 180px;
                 border-radius: 15px;
                 object-fit: cover;
             }
             &__contenido{
-                width: 40%; //40% para pantalla grande
+                width: 40%; 
                 &__titulo{
                     color: $blanco-secondary;
                     display: block;
@@ -178,7 +178,7 @@
 
             }
             &__fecha{
-                width: 30%; //25% para pantalla grande
+                width: 30%;
                 &__dia{
                     color: $blanco-third;
                     display: block;
@@ -189,7 +189,7 @@
                 }
             }
             &__boton{
-                width: 17%; //15% para pantalla grande
+                width: 17%;
                 border-radius: 5px;
                 padding: 5px 3px;
                 text-decoration: none;
